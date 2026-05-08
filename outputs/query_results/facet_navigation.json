@@ -2,7 +2,7 @@
     "responseHeader":  {
                            "zkConnected":  true,
                            "status":  0,
-                           "QTime":  124,
+                           "QTime":  9,
                            "params":  {
                                           "q":  "*:*",
                                           "json.facet":  "{\"category\":{\"type\":\"terms\",\"field\":\"category\",\"limit\":10},\"access_type\":{\"type\":\"terms\",\"field\":\"access_type\",\"limit\":10},\"year\":{\"type\":\"terms\",\"field\":\"year\",\"limit\":10,\"sort\":\"index desc\"}}",

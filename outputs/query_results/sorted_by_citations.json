@@ -2,7 +2,7 @@
     "responseHeader":  {
                            "zkConnected":  true,
                            "status":  0,
-                           "QTime":  35,
+                           "QTime":  19,
                            "params":  {
                                           "q":  "search",
                                           "defType":  "edismax",
@@ -42,7 +42,7 @@
                                       "access_type":  "Open Access",
                                       "doi":  "10.3470/ra013",
                                       "url":  "https://example.org/articles/ra013",
-                                      "_version_":  1864599926402449408,
+                                      "_version_":  1864603112771158016,
                                       "_root_":  "RA013"
                                   },
                                   {
@@ -70,7 +70,7 @@
                                       "access_type":  "Open Access",
                                       "doi":  "10.3470/ra001",
                                       "url":  "https://example.org/articles/ra001",
-                                      "_version_":  1864599926069002240,
+                                      "_version_":  1864603112731312128,
                                       "_root_":  "RA001"
                                   },
                                   {
@@ -98,7 +98,7 @@
                                       "access_type":  "Open Access",
                                       "doi":  "10.3470/ra008",
                                       "url":  "https://example.org/articles/ra008",
-                                      "_version_":  1864599926383575040,
+                                      "_version_":  1864603112763817984,
                                       "_root_":  "RA008"
                                   },
                                   {
@@ -125,7 +125,7 @@
                                       "access_type":  "Open Access",
                                       "doi":  "10.3470/ra004",
                                       "url":  "https://example.org/articles/ra004",
-                                      "_version_":  1864599926310174720,
+                                      "_version_":  1864603112743895040,
                                       "_root_":  "RA004"
                                   },
                                   {
@@ -153,7 +153,7 @@
                                       "access_type":  "Open Access",
                                       "doi":  "10.3470/ra011",
                                       "url":  "https://example.org/articles/ra011",
-                                      "_version_":  1864599926395109376,
+                                      "_version_":  1864603112768012288,
                                       "_root_":  "RA011"
                                   }
                               ]

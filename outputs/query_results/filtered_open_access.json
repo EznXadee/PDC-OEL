@@ -2,7 +2,7 @@
     "responseHeader":  {
                            "zkConnected":  true,
                            "status":  0,
-                           "QTime":  59,
+                           "QTime":  29,
                            "params":  {
                                           "q":  "retrieval",
                                           "defType":  "edismax",
@@ -45,7 +45,7 @@
                                       "access_type":  "Open Access",
                                       "doi":  "10.3470/ra009",
                                       "url":  "https://example.org/articles/ra009",
-                                      "_version_":  1864599926325903360,
+                                      "_version_":  1864603112749137920,
                                       "_root_":  "RA009"
                                   },
                                   {
@@ -73,7 +73,7 @@
                                       "access_type":  "Open Access",
                                       "doi":  "10.3470/ra007",
                                       "url":  "https://example.org/articles/ra007",
-                                      "_version_":  1864599926379380736,
+                                      "_version_":  1864603112761720832,
                                       "_root_":  "RA007"
                                   }
                               ]
