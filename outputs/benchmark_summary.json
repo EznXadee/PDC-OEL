@@ -1,0 +1,56 @@
+{
+  "dataset_size": 18,
+  "analysis_generated_at": "2026-05-08 11:18:08",
+  "benchmarks": [
+    {
+      "average_qtime_ms": 72.2,
+      "average_wall_time_ms": 2117.87,
+      "minimum_qtime_ms": 34,
+      "maximum_qtime_ms": 178,
+      "top_titles": [
+        [
+          "Neural Ranking Strategies for Academic Search Portals"
+        ],
+        [
+          "Benchmarking Faceted Search for University Repositories"
+        ],
+        [
+          "Schema Design Tradeoffs for Product Catalog Search"
+        ]
+      ],
+      "label": "Neural search relevance query"
+    },
+    {
+      "average_qtime_ms": 34.6,
+      "average_wall_time_ms": 2085.06,
+      "minimum_qtime_ms": 32,
+      "maximum_qtime_ms": 36,
+      "top_titles": [
+        [
+          "Knowledge Graph Assisted Retrieval for Smart Agriculture"
+        ],
+        [
+          "Vector Search and Lexical Search Hybridization in Solr"
+        ]
+      ],
+      "label": "Open access retrieval query"
+    },
+    {
+      "average_qtime_ms": 31.8,
+      "average_wall_time_ms": 2070.14,
+      "minimum_qtime_ms": 28,
+      "maximum_qtime_ms": 37,
+      "top_titles": [
+        [
+          "Optimizing Filter Caches for High Traffic Search APIs"
+        ]
+      ],
+      "label": "Performance cache query"
+    }
+  ],
+  "observations": [
+    "Facet and filter oriented queries remained fast because the dataset uses explicit string and numeric field types.",
+    "Queries using all_text improved recall compared to field restricted queries, but field boosting kept title matches more relevant.",
+    "Highlighting made the result list easier to evaluate because matched evidence appeared directly in the snippets."
+  ]
+}

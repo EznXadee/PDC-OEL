@@ -1,0 +1,6 @@
+{
+    "collection":  "research_portal",
+    "shards":  2,
+    "replicationFactor":  1,
+    "configuredAt":  "2026-05-08T11:16:42"
+}

@@ -1,0 +1,161 @@
+{
+    "responseHeader":  {
+                           "zkConnected":  true,
+                           "status":  0,
+                           "QTime":  35,
+                           "params":  {
+                                          "q":  "search",
+                                          "defType":  "edismax",
+                                          "qf":  "all_text",
+                                          "sort":  "citations desc",
+                                          "rows":  "5",
+                                          "wt":  "json"
+                                      }
+                       },
+    "response":  {
+                     "numFound":  13,
+                     "start":  0,
+                     "numFoundExact":  true,
+                     "docs":  [
+                                  {
+                                      "id":  "RA013",
+                                      "title":  [
+                                                    "Search Personalization with Research Interest Profiles"
+                                                ],
+                                      "abstract":  [
+                                                       "The system adapts ranking signals using user interest profiles and click behavior to personalize results in digital libraries."
+                                                   ],
+                                      "authors":  [
+                                                      "Mahnoor Akram",
+                                                      "Talha Imran"
+                                                  ],
+                                      "category":  "Recommender Systems",
+                                      "year":  2022,
+                                      "venue":  "Personalized Systems Journal",
+                                      "document_type":  "Journal Article",
+                                      "keywords":  [
+                                                       "personalization",
+                                                       "click behavior",
+                                                       "digital libraries"
+                                                   ],
+                                      "citations":  62,
+                                      "access_type":  "Open Access",
+                                      "doi":  "10.3470/ra013",
+                                      "url":  "https://example.org/articles/ra013",
+                                      "_version_":  1864599926402449408,
+                                      "_root_":  "RA013"
+                                  },
+                                  {
+                                      "id":  "RA001",
+                                      "title":  [
+                                                    "Neural Ranking Strategies for Academic Search Portals"
+                                                ],
+                                      "abstract":  [
+                                                       "This paper compares neural ranking models for long form academic documents and evaluates relevance feedback for research discovery systems."
+                                                   ],
+                                      "authors":  [
+                                                      "Ayesha Khan",
+                                                      "Bilal Ahmed"
+                                                  ],
+                                      "category":  "Information Retrieval",
+                                      "year":  2024,
+                                      "venue":  "Journal of Intelligent Systems",
+                                      "document_type":  "Journal Article",
+                                      "keywords":  [
+                                                       "neural ranking",
+                                                       "academic search",
+                                                       "relevance feedback"
+                                                   ],
+                                      "citations":  58,
+                                      "access_type":  "Open Access",
+                                      "doi":  "10.3470/ra001",
+                                      "url":  "https://example.org/articles/ra001",
+                                      "_version_":  1864599926069002240,
+                                      "_root_":  "RA001"
+                                  },
+                                  {
+                                      "id":  "RA008",
+                                      "title":  [
+                                                    "Cross Lingual Search for South Asian Research Archives"
+                                                ],
+                                      "abstract":  [
+                                                       "This paper presents bilingual indexing and transliteration support to improve multilingual access to archived publications from South Asia."
+                                                   ],
+                                      "authors":  [
+                                                      "Kiran Abbas",
+                                                      "Omer Shafiq"
+                                                  ],
+                                      "category":  "Natural Language Processing",
+                                      "year":  2022,
+                                      "venue":  "Language Technologies Forum",
+                                      "document_type":  "Conference Paper",
+                                      "keywords":  [
+                                                       "cross lingual",
+                                                       "archives",
+                                                       "transliteration"
+                                                   ],
+                                      "citations":  53,
+                                      "access_type":  "Open Access",
+                                      "doi":  "10.3470/ra008",
+                                      "url":  "https://example.org/articles/ra008",
+                                      "_version_":  1864599926383575040,
+                                      "_root_":  "RA008"
+                                  },
+                                  {
+                                      "id":  "RA004",
+                                      "title":  [
+                                                    "Secure Log Analytics with Full Text Search Pipelines"
+                                                ],
+                                      "abstract":  [
+                                                       "This work integrates log parsing, anomaly tagging, and indexed search to support secure incident analysis in enterprise systems."
+                                                   ],
+                                      "authors":  [
+                                                      "Usman Tariq"
+                                                  ],
+                                      "category":  "Cybersecurity",
+                                      "year":  2021,
+                                      "venue":  "Security Engineering Proceedings",
+                                      "document_type":  "Conference Paper",
+                                      "keywords":  [
+                                                       "log analytics",
+                                                       "security monitoring",
+                                                       "full text search"
+                                                   ],
+                                      "citations":  47,
+                                      "access_type":  "Open Access",
+                                      "doi":  "10.3470/ra004",
+                                      "url":  "https://example.org/articles/ra004",
+                                      "_version_":  1864599926310174720,
+                                      "_root_":  "RA004"
+                                  },
+                                  {
+                                      "id":  "RA011",
+                                      "title":  [
+                                                    "Schema Design Tradeoffs for Product Catalog Search"
+                                                ],
+                                      "abstract":  [
+                                                       "This article compares string, text, numeric, and multivalued fields for retail catalogs where filtering and relevance tuning must coexist."
+                                                   ],
+                                      "authors":  [
+                                                      "Ahmed Rehman",
+                                                      "Aqsa Tariq"
+                                                  ],
+                                      "category":  "E Commerce",
+                                      "year":  2023,
+                                      "venue":  "Retail Data Engineering Summit",
+                                      "document_type":  "Conference Paper",
+                                      "keywords":  [
+                                                       "schema design",
+                                                       "catalog search",
+                                                       "multivalued fields"
+                                                   ],
+                                      "citations":  44,
+                                      "access_type":  "Open Access",
+                                      "doi":  "10.3470/ra011",
+                                      "url":  "https://example.org/articles/ra011",
+                                      "_version_":  1864599926395109376,
+                                      "_root_":  "RA011"
+                                  }
+                              ]
+                 }
+}

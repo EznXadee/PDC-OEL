@@ -1,0 +1,112 @@
+{
+    "responseHeader":  {
+                           "zkConnected":  true,
+                           "status":  0,
+                           "QTime":  124,
+                           "params":  {
+                                          "q":  "*:*",
+                                          "json.facet":  "{\"category\":{\"type\":\"terms\",\"field\":\"category\",\"limit\":10},\"access_type\":{\"type\":\"terms\",\"field\":\"access_type\",\"limit\":10},\"year\":{\"type\":\"terms\",\"field\":\"year\",\"limit\":10,\"sort\":\"index desc\"}}",
+                                          "rows":  "0",
+                                          "wt":  "json"
+                                      }
+                       },
+    "response":  {
+                     "numFound":  18,
+                     "start":  0,
+                     "numFoundExact":  true,
+                     "docs":  [
+
+                              ]
+                 },
+    "facets":  {
+                   "count":  18,
+                   "access_type":  {
+                                       "buckets":  [
+                                                       {
+                                                           "val":  "Open Access",
+                                                           "count":  11
+                                                       },
+                                                       {
+                                                           "val":  "Subscription",
+                                                           "count":  4
+                                                       },
+                                                       {
+                                                           "val":  "Institutional Access",
+                                                           "count":  3
+                                                       }
+                                                   ]
+                                   },
+                   "year":  {
+                                "buckets":  [
+                                                {
+                                                    "val":  2025,
+                                                    "count":  2
+                                                },
+                                                {
+                                                    "val":  2024,
+                                                    "count":  4
+                                                },
+                                                {
+                                                    "val":  2023,
+                                                    "count":  4
+                                                },
+                                                {
+                                                    "val":  2022,
+                                                    "count":  3
+                                                },
+                                                {
+                                                    "val":  2021,
+                                                    "count":  3
+                                                },
+                                                {
+                                                    "val":  2020,
+                                                    "count":  2
+                                                }
+                                            ]
+                            },
+                   "category":  {
+                                    "buckets":  [
+                                                    {
+                                                        "val":  "Information Retrieval",
+                                                        "count":  2
+                                                    },
+                                                    {
+                                                        "val":  "Legal Tech",
+                                                        "count":  2
+                                                    },
+                                                    {
+                                                        "val":  "Agricultural Technology",
+                                                        "count":  1
+                                                    },
+                                                    {
+                                                        "val":  "Cybersecurity",
+                                                        "count":  1
+                                                    },
+                                                    {
+                                                        "val":  "Data Quality",
+                                                        "count":  1
+                                                    },
+                                                    {
+                                                        "val":  "Distributed Systems",
+                                                        "count":  1
+                                                    },
+                                                    {
+                                                        "val":  "E Commerce",
+                                                        "count":  1
+                                                    },
+                                                    {
+                                                        "val":  "Educational Technology",
+                                                        "count":  1
+                                                    },
+                                                    {
+                                                        "val":  "FinTech",
+                                                        "count":  1
+                                                    },
+                                                    {
+                                                        "val":  "Health Informatics",
+                                                        "count":  1
+                                                    }
+                                                ]
+                                }
+               }
+}

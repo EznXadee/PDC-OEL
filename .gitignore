@@ -1,0 +1,8 @@
+solr-10.0.0/
+solr-10.0.0-old/
+solr-10.0.0.tgz
+solr-10.0.0.zip
+submission/
+*.zip
+outputs/web_stdout.log
+outputs/web_stderr.log

@@ -1,0 +1,93 @@
+{
+    "responseHeader":  {
+                           "zkConnected":  true,
+                           "status":  0,
+                           "QTime":  59,
+                           "params":  {
+                                          "q":  "retrieval",
+                                          "defType":  "edismax",
+                                          "hl":  "true",
+                                          "qf":  "title^4 abstract^2 keywords^3",
+                                          "fq":  "access_type:\"Open Access\"",
+                                          "sort":  "year desc",
+                                          "hl.fl":  "title,abstract",
+                                          "rows":  "5",
+                                          "wt":  "json"
+                                      }
+                       },
+    "response":  {
+                     "numFound":  2,
+                     "start":  0,
+                     "numFoundExact":  true,
+                     "docs":  [
+                                  {
+                                      "id":  "RA009",
+                                      "title":  [
+                                                    "Vector Search and Lexical Search Hybridization in Solr"
+                                                ],
+                                      "abstract":  [
+                                                       "Hybrid retrieval combines dense vector similarity with BM25 lexical ranking to improve semantic matching on research abstracts."
+                                                   ],
+                                      "authors":  [
+                                                      "Laiba Saeed",
+                                                      "Umar Farooq"
+                                                  ],
+                                      "category":  "Machine Learning",
+                                      "year":  2025,
+                                      "venue":  "Modern Search Engineering",
+                                      "document_type":  "Journal Article",
+                                      "keywords":  [
+                                                       "vector search",
+                                                       "hybrid retrieval",
+                                                       "bm25"
+                                                   ],
+                                      "citations":  17,
+                                      "access_type":  "Open Access",
+                                      "doi":  "10.3470/ra009",
+                                      "url":  "https://example.org/articles/ra009",
+                                      "_version_":  1864599926325903360,
+                                      "_root_":  "RA009"
+                                  },
+                                  {
+                                      "id":  "RA007",
+                                      "title":  [
+                                                    "Knowledge Graph Assisted Retrieval for Smart Agriculture"
+                                                ],
+                                      "abstract":  [
+                                                       "The article studies how agricultural terms, regions, and crop relations improve discovery of advisory documents in farming support platforms."
+                                                   ],
+                                      "authors":  [
+                                                      "Nimra Hassan",
+                                                      "Zeeshan Malik"
+                                                  ],
+                                      "category":  "Agricultural Technology",
+                                      "year":  2023,
+                                      "venue":  "Applied Data Systems Journal",
+                                      "document_type":  "Journal Article",
+                                      "keywords":  [
+                                                       "knowledge graph",
+                                                       "agriculture",
+                                                       "semantic retrieval"
+                                                   ],
+                                      "citations":  29,
+                                      "access_type":  "Open Access",
+                                      "doi":  "10.3470/ra007",
+                                      "url":  "https://example.org/articles/ra007",
+                                      "_version_":  1864599926379380736,
+                                      "_root_":  "RA007"
+                                  }
+                              ]
+                 },
+    "highlighting":  {
+                         "RA009":  {
+                                       "abstract":  [
+                                                        "Hybrid \u003cem\u003eretrieval\u003c/em\u003e combines dense vector similarity with BM25 lexical ranking to improve semantic matching on research abstracts."
+                                                    ]
+                                   },
+                         "RA007":  {
+                                       "title":  [
+                                                     "Knowledge Graph Assisted \u003cem\u003eRetrieval\u003c/em\u003e for Smart Agriculture"
+                                                 ]
+                                   }
+                     }
+}

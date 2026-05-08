@@ -1,0 +1,199 @@
+{
+    "responseHeader":  {
+                           "zkConnected":  true,
+                           "status":  0,
+                           "QTime":  196,
+                           "params":  {
+                                          "q":  "neural search",
+                                          "defType":  "edismax",
+                                          "hl":  "true",
+                                          "qf":  "title^4 abstract^2 keywords^3 authors^2",
+                                          "hl.fl":  "title,abstract",
+                                          "rows":  "5",
+                                          "wt":  "json"
+                                      }
+                       },
+    "response":  {
+                     "numFound":  11,
+                     "start":  0,
+                     "maxScore":  4.509831,
+                     "numFoundExact":  true,
+                     "docs":  [
+                                  {
+                                      "id":  "RA001",
+                                      "title":  [
+                                                    "Neural Ranking Strategies for Academic Search Portals"
+                                                ],
+                                      "abstract":  [
+                                                       "This paper compares neural ranking models for long form academic documents and evaluates relevance feedback for research discovery systems."
+                                                   ],
+                                      "authors":  [
+                                                      "Ayesha Khan",
+                                                      "Bilal Ahmed"
+                                                  ],
+                                      "category":  "Information Retrieval",
+                                      "year":  2024,
+                                      "venue":  "Journal of Intelligent Systems",
+                                      "document_type":  "Journal Article",
+                                      "keywords":  [
+                                                       "neural ranking",
+                                                       "academic search",
+                                                       "relevance feedback"
+                                                   ],
+                                      "citations":  58,
+                                      "access_type":  "Open Access",
+                                      "doi":  "10.3470/ra001",
+                                      "url":  "https://example.org/articles/ra001",
+                                      "_version_":  1864599926069002240,
+                                      "_root_":  "RA001"
+                                  },
+                                  {
+                                      "id":  "RA003",
+                                      "title":  [
+                                                    "Benchmarking Faceted Search for University Repositories"
+                                                ],
+                                      "abstract":  [
+                                                       "The study measures user efficiency gains when faceted navigation is applied to institutional repositories with heterogeneous metadata quality."
+                                                   ],
+                                      "authors":  [
+                                                      "Mariam Yousaf",
+                                                      "Raza Siddiqui"
+                                                  ],
+                                      "category":  "Information Retrieval",
+                                      "year":  2022,
+                                      "venue":  "Digital Library Review",
+                                      "document_type":  "Journal Article",
+                                      "keywords":  [
+                                                       "faceted search",
+                                                       "repositories",
+                                                       "metadata"
+                                                   ],
+                                      "citations":  39,
+                                      "access_type":  "Subscription",
+                                      "doi":  "10.3470/ra003",
+                                      "url":  "https://example.org/articles/ra003",
+                                      "_version_":  1864599926356312064,
+                                      "_root_":  "RA003"
+                                  },
+                                  {
+                                      "id":  "RA011",
+                                      "title":  [
+                                                    "Schema Design Tradeoffs for Product Catalog Search"
+                                                ],
+                                      "abstract":  [
+                                                       "This article compares string, text, numeric, and multivalued fields for retail catalogs where filtering and relevance tuning must coexist."
+                                                   ],
+                                      "authors":  [
+                                                      "Ahmed Rehman",
+                                                      "Aqsa Tariq"
+                                                  ],
+                                      "category":  "E Commerce",
+                                      "year":  2023,
+                                      "venue":  "Retail Data Engineering Summit",
+                                      "document_type":  "Conference Paper",
+                                      "keywords":  [
+                                                       "schema design",
+                                                       "catalog search",
+                                                       "multivalued fields"
+                                                   ],
+                                      "citations":  44,
+                                      "access_type":  "Open Access",
+                                      "doi":  "10.3470/ra011",
+                                      "url":  "https://example.org/articles/ra011",
+                                      "_version_":  1864599926395109376,
+                                      "_root_":  "RA011"
+                                  },
+                                  {
+                                      "id":  "RA004",
+                                      "title":  [
+                                                    "Secure Log Analytics with Full Text Search Pipelines"
+                                                ],
+                                      "abstract":  [
+                                                       "This work integrates log parsing, anomaly tagging, and indexed search to support secure incident analysis in enterprise systems."
+                                                   ],
+                                      "authors":  [
+                                                      "Usman Tariq"
+                                                  ],
+                                      "category":  "Cybersecurity",
+                                      "year":  2021,
+                                      "venue":  "Security Engineering Proceedings",
+                                      "document_type":  "Conference Paper",
+                                      "keywords":  [
+                                                       "log analytics",
+                                                       "security monitoring",
+                                                       "full text search"
+                                                   ],
+                                      "citations":  47,
+                                      "access_type":  "Open Access",
+                                      "doi":  "10.3470/ra004",
+                                      "url":  "https://example.org/articles/ra004",
+                                      "_version_":  1864599926310174720,
+                                      "_root_":  "RA004"
+                                  },
+                                  {
+                                      "id":  "RA005",
+                                      "title":  [
+                                                    "Explainable Search Results for Health Informatics Records"
+                                                ],
+                                      "abstract":  [
+                                                       "The authors propose an explainable ranking interface for clinical knowledge search with highlighted evidence snippets and transparent filtering."
+                                                   ],
+                                      "authors":  [
+                                                      "Hina Latif",
+                                                      "Danish Waheed"
+                                                  ],
+                                      "category":  "Health Informatics",
+                                      "year":  2024,
+                                      "venue":  "Health Data and AI Journal",
+                                      "document_type":  "Journal Article",
+                                      "keywords":  [
+                                                       "explainable ai",
+                                                       "health records",
+                                                       "highlighting"
+                                                   ],
+                                      "citations":  22,
+                                      "access_type":  "Open Access",
+                                      "doi":  "10.3470/ra005",
+                                      "url":  "https://example.org/articles/ra005",
+                                      "_version_":  1864599926314369024,
+                                      "_root_":  "RA005"
+                                  }
+                              ]
+                 },
+    "highlighting":  {
+                         "RA001":  {
+                                       "title":  [
+                                                     "\u003cem\u003eNeural\u003c/em\u003e Ranking Strategies for Academic \u003cem\u003eSearch\u003c/em\u003e Portals"
+                                                 ],
+                                       "abstract":  [
+                                                        "This paper compares \u003cem\u003eneural\u003c/em\u003e ranking models for long form academic documents and evaluates relevance feedback for research discovery systems."
+                                                    ]
+                                   },
+                         "RA003":  {
+                                       "title":  [
+                                                     "Benchmarking Faceted \u003cem\u003eSearch\u003c/em\u003e for University Repositories"
+                                                 ]
+                                   },
+                         "RA011":  {
+                                       "title":  [
+                                                     "Schema Design Tradeoffs for Product Catalog \u003cem\u003eSearch\u003c/em\u003e"
+                                                 ]
+                                   },
+                         "RA004":  {
+                                       "title":  [
+                                                     "Secure Log Analytics with Full Text \u003cem\u003eSearch\u003c/em\u003e Pipelines"
+                                                 ],
+                                       "abstract":  [
+                                                        "This work integrates log parsing, anomaly tagging, and indexed \u003cem\u003esearch\u003c/em\u003e to support secure incident analysis in enterprise systems."
+                                                    ]
+                                   },
+                         "RA005":  {
+                                       "title":  [
+                                                     "Explainable \u003cem\u003eSearch\u003c/em\u003e Results for Health Informatics Records"
+                                                 ],
+                                       "abstract":  [
+                                                        "The authors propose an explainable ranking interface for clinical knowledge \u003cem\u003esearch\u003c/em\u003e with highlighted evidence snippets and transparent filtering."
+                                                    ]
+                                   }
+                     }
+}

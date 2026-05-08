@@ -1,0 +1,12 @@
+The source code in this folder is ready to publish to GitHub.
+
+GitHub account:
+EznXadee
+
+Suggested repository name:
+PDC-OEL-Solr-Lab
+
+Suggested repository URL:
+https://github.com/EznXadee/PDC-OEL-Solr-Lab
+
+After creating the repository and pushing this folder, regenerate or update the report so the final submitted document contains the real repository URL.
