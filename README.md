@@ -52,11 +52,11 @@ Suggested GitHub repository owner:
 
 Suggested repository name:
 
-- `PDC-OEL-Solr-Lab`
+- `PDC-OEL`
 
 Suggested repository URL after creation:
 
-- `https://github.com/EznXadee/PDC-OEL-Solr-Lab`
+- `https://github.com/EznXadee/PDC-OEL`
 
 The large local Solr installation folders and generated submission zip are intentionally ignored by Git so only the actual lab source and report assets are published.
 

@@ -18,7 +18,7 @@ OUTPUTS = ROOT / "outputs"
 SCREENSHOTS = OUTPUTS / "screenshots"
 REPORTS = ROOT / "reports"
 GITHUB_USERNAME = "EznXadee"
-GITHUB_REPO_NAME = "PDC-OEL-Solr-Lab"
+GITHUB_REPO_NAME = "PDC-OEL"
 GITHUB_REPO_URL = f"https://github.com/{GITHUB_USERNAME}/{GITHUB_REPO_NAME}"
 
 

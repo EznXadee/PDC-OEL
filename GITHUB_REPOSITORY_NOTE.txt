@@ -4,9 +4,9 @@ GitHub account:
 EznXadee
 
 Suggested repository name:
-PDC-OEL-Solr-Lab
+PDC-OEL
 
 Suggested repository URL:
-https://github.com/EznXadee/PDC-OEL-Solr-Lab
+https://github.com/EznXadee/PDC-OEL
 
 After creating the repository and pushing this folder, regenerate or update the report so the final submitted document contains the real repository URL.
