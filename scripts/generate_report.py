@@ -67,6 +67,16 @@ def add_body_paragraph(doc: Document, text: str) -> None:
     run.font.size = Pt(11)
 
 
+def add_code_paragraph(doc: Document, text: str) -> None:
+    p = doc.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+    p.paragraph_format.space_after = Pt(6)
+    p.paragraph_format.left_indent = Cm(0.7)
+    run = p.add_run(text)
+    run.font.name = "Consolas"
+    run.font.size = Pt(10)
+
+
 def add_caption(doc: Document, text: str) -> None:
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -146,7 +156,8 @@ def main() -> None:
     add_body_paragraph(
         doc,
         "This report presents a complete Apache Solr implementation built around a research article discovery portal. "
-        "The work includes SolrCloud collection creation, schema design, dataset indexing, query experimentation, a responsive web search interface, and a final analysis of performance and search quality.",
+        "The work includes SolrCloud collection creation, schema design, dataset indexing, query experimentation, a responsive web search interface, and a final analysis of performance and search quality. "
+        "The implementation was designed not as a toy example, but as a compact professional search system that demonstrates how structured metadata, full text retrieval, and interface level filtering can be combined into a coherent retrieval application.",
     )
 
     doc.add_page_break()
@@ -155,14 +166,17 @@ def main() -> None:
     add_body_paragraph(
         doc,
         "The objective of this lab was to design and implement a practical Solr based search solution using a self selected real world style dataset. "
-        "The system needed to support indexing, flexible search queries, filtering, sorting, faceted navigation, highlighting, and a web based interface suitable for interactive searching.",
+        "The system needed to support indexing, flexible search queries, filtering, sorting, faceted navigation, highlighting, and a web based interface suitable for interactive searching. "
+        "From a software engineering perspective, the task also required reproducibility, clear project organization, measurable outputs, and a report that connects implementation details with observable results.",
     )
 
     add_section_heading(doc, "Dataset Description")
     add_body_paragraph(
         doc,
         "A curated dataset of eighteen research articles was created to simulate a university or enterprise research portal. "
-        "This dataset was selected because it contains both descriptive metadata and meaningful searchable text, making it suitable for demonstrating full text retrieval as well as structured filtering.",
+        "This dataset was selected because it contains both descriptive metadata and meaningful searchable text, making it suitable for demonstrating full text retrieval as well as structured filtering. "
+        "Each record includes descriptive fields such as title, abstract, authors, venue, year, and document type, together with ranking oriented attributes such as citation count and access type. "
+        "This combination allows the report to discuss both retrieval quality and interface behavior in a realistic way.",
     )
 
     fields_table = doc.add_table(rows=1, cols=3)
@@ -197,7 +211,8 @@ def main() -> None:
     add_body_paragraph(
         doc,
         f"The collection named {setup['collection']} was created in SolrCloud mode with {setup['shards']} logical shards and a replication factor of {setup['replicationFactor']}. "
-        "The default configset was extended through the Schema API so that text fields, exact filter fields, and numeric sort fields were explicitly defined instead of depending on automatic field inference.",
+        "The default configset was extended through the Schema API so that text fields, exact filter fields, and numeric sort fields were explicitly defined instead of depending on automatic field inference. "
+        "This explicit schema design was important because it prevented accidental type inference, improved query predictability, and ensured that faceting and sorting behaved consistently across repeated executions.",
     )
 
     config_table = doc.add_table(rows=1, cols=2)
@@ -227,7 +242,8 @@ def main() -> None:
     add_body_paragraph(
         doc,
         "The implementation was automated through local scripts so the system could be reproduced consistently. "
-        "The setup script created the collection and schema, the indexing script imported the dataset, the query script saved representative result sets, and the analysis script measured query responsiveness.",
+        "The setup script created the collection and schema, the indexing script imported the dataset, the query script saved representative result sets, and the analysis script measured query responsiveness. "
+        "In the final verified run, the setup process confirmed the existence of the target collection, the indexing process reported eighteen indexed documents, the query export script generated four result files, and the Node based web service started successfully on the local machine.",
     )
 
     steps_table = doc.add_table(rows=1, cols=2)
@@ -254,11 +270,58 @@ def main() -> None:
         action_run.font.name = "Consolas"
         action_run.font.size = Pt(9.5)
 
+    add_section_heading(doc, "Code Level Design and Implementation")
+    add_body_paragraph(
+        doc,
+        "The project was intentionally separated into small focused scripts so that each stage of the workflow could be understood, repeated, and debugged independently. "
+        "This design also makes the repository easier to demonstrate in an academic setting because collection setup, indexing, query execution, and presentation logic are not mixed together in one file.",
+    )
+    add_body_paragraph(
+        doc,
+        "The setup script initializes the research_portal collection through the Solr Collections API and then applies schema definitions through the Schema API. "
+        "The most important design choice in this script is the explicit declaration of text fields, exact string fields, and numeric integer fields. "
+        "A copyField configuration sends title, abstract, authors, keywords, and venue into all_text so that recall can be improved without weakening the structure of the original schema.",
+    )
+    add_code_paragraph(doc, 'Invoke-RestMethod -Method Get -Uri "$SolrBaseUrl/admin/collections?action=CREATE&name=$Collection&numShards=2&replicationFactor=1&collection.configName=_default&wt=json"')
+    add_code_paragraph(doc, '"add-copy-field" = @( @{ source = "title"; dest = "all_text" }, @{ source = "abstract"; dest = "all_text" } )')
+    add_body_paragraph(
+        doc,
+        "The indexing script reads the JSON dataset as a raw payload and posts it directly to the Solr update endpoint with commit enabled. "
+        "A verification query immediately follows the import so that the generated summary file records the effective document count instead of assuming success. "
+        "This is a useful professional practice because it converts a blind write operation into a measurable ingestion step.",
+    )
+    add_code_paragraph(doc, '$dataset = Get-Content $DatasetPath -Raw')
+    add_code_paragraph(doc, 'Invoke-RestMethod -Method Post -Uri "http://localhost:8983/api/collections/$Collection/update?commit=true" -ContentType "application/json" -Body $dataset')
+    add_body_paragraph(
+        doc,
+        "The query execution script stores representative search outputs into JSON files so that the evidence used in the report is reproducible. "
+        "Rather than relying only on screenshots, the project preserves the raw responses for a relevance query, an open access filtered query, a facet summary query, and a citation based sorting query. "
+        "This makes the report stronger because the written observations can be traced back to saved machine readable outputs.",
+    )
+    add_code_paragraph(doc, 'http://localhost:8983/api/collections/research_portal/select?defType=edismax&q=neural%20search&qf=title^4%20abstract^2%20keywords^3%20authors^2&rows=5&hl=true')
+    add_body_paragraph(
+        doc,
+        "The web layer was implemented in Node.js using the native http module so that the project remains lightweight and easy to run. "
+        "The server exposes a search endpoint and a suggestion endpoint, both of which translate browser input into Solr requests. "
+        "The buildSearchUrl function is especially important because it assembles query text, page offsets, sort order, filters, and JSON facets into one controlled Solr request. "
+        "This separation between browser UI and Solr access also avoids cross origin issues and keeps the client side code simpler.",
+    )
+    add_code_paragraph(doc, 'solrUrl.searchParams.set("qf", "title^4 abstract^2 keywords^3 authors^2 venue")')
+    add_code_paragraph(doc, 'solrUrl.searchParams.append("fq", `access_type:"${accessType}"`)')
+    add_code_paragraph(doc, 'server.listen(PORT, () => { console.log(`Research portal web interface running on http://localhost:${PORT}`); });')
+    add_body_paragraph(
+        doc,
+        "On the client side, the JavaScript code manages a central state object containing the query string, selected facet filters, current page, and active sort mode. "
+        "The runSearch function requests data from the backend and updates the results list, facet controls, and pagination state together. "
+        "This gives the interface a responsive feel while keeping the application logic understandable for review and demonstration.",
+    )
+
     add_section_heading(doc, "Search Experiments and Results")
     add_body_paragraph(
         doc,
         "Several search experiments were executed to demonstrate plain keyword search, filtered retrieval, faceted exploration, sorting by citation count, and visual term highlighting. "
-        "The responses show that the collection returns meaningful matches for academic search terms and supports exact filtering without sacrificing recall.",
+        "The responses show that the collection returns meaningful matches for academic search terms and supports exact filtering without sacrificing recall. "
+        "The observed titles in the saved outputs also indicate that ranking behavior is sensible because domain relevant records appear at the top for each scenario.",
     )
 
     experiments = doc.add_table(rows=1, cols=4)
@@ -305,7 +368,9 @@ def main() -> None:
         doc,
         "A lightweight Node based server was created to serve the frontend and proxy search requests to Solr. "
         "This design avoids cross origin complications and makes the interface easy to run on any local machine. "
-        "The frontend supports live query submission, autocomplete suggestions, category facets, access and year filters, sorting options, pagination controls, and highlighted search snippets.",
+        "The frontend supports live query submission, autocomplete suggestions, category facets, access and year filters, sorting options, pagination controls, and highlighted search snippets. "
+        "The interface presents the retrieval workflow in a clear order by first inviting a user query, then offering refinement controls, and finally rendering result cards with metadata pills and highlighted evidence. "
+        "This structure is appropriate for a research portal because it balances exploration with precision.",
     )
 
     add_image(doc, SCREENSHOTS / "web_search_results.png", 6.1, "Figure 3. Query results with highlighting, facets, pagination, and metadata pills.")
@@ -315,7 +380,8 @@ def main() -> None:
     add_body_paragraph(
         doc,
         "The generated benchmark summary indicates that Solr handled the dataset comfortably, with low internal query times and consistently relevant top results. "
-        "The measured wall time from the analysis script includes local request overhead, but the Solr QTime values remain the primary indicator of search engine responsiveness.",
+        "The measured wall time from the analysis script includes local request overhead, but the Solr QTime values remain the primary indicator of search engine responsiveness. "
+        "The benchmark results show that even when different query patterns are used, the collection remains responsive and returns records that align with the intended retrieval goal.",
     )
 
     benchmark_table = doc.add_table(rows=1, cols=4)
@@ -341,7 +407,8 @@ def main() -> None:
         doc,
         "Accuracy was evaluated qualitatively by reviewing the top returned articles for each scenario. "
         "Queries such as neural search and retrieval returned documents whose titles and abstracts directly matched the search intent. "
-        "Highlighting improved result interpretability because users could identify the matched evidence without opening each record.",
+        "Highlighting improved result interpretability because users could identify the matched evidence without opening each record. "
+        "Faceted summaries also improved navigability because users could narrow large result sets by category, year, or access type without reformulating the original query.",
     )
 
     add_section_heading(doc, "Challenges Faced and Solutions")
@@ -378,7 +445,8 @@ def main() -> None:
     add_body_paragraph(
         doc,
         "The final system demonstrates a complete Solr search workflow from collection setup to user facing web integration. "
-        "The project successfully indexed a custom dataset, supported advanced retrieval features, and produced a polished interface suitable for search driven applications such as digital libraries, repositories, and knowledge portals.",
+        "The project successfully indexed a custom dataset, supported advanced retrieval features, and produced a polished interface suitable for search driven applications such as digital libraries, repositories, and knowledge portals. "
+        "Beyond satisfying the lab requirements, the submission shows a disciplined approach to automation, evidence collection, code organization, and interface design, which together make the work more professional and easier to evaluate.",
     )
 
     add_section_heading(doc, "GitHub Repository Note")
